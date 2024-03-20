@@ -12,15 +12,43 @@
         android:textColor="@color/black"
         android:textSize="13sp" />
 
+<!--    <TextView-->
+<!--        android:id="@+id/listItemAddress"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:textColor="@android:color/darker_gray"-->
+<!--        android:layout_toEndOf="@+id/listItemSSID"-->
+<!--        android:textSize="12sp" />-->
+
+    <ImageView
+        android:id="@+id/listItemWifiLock"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/lock"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="7dp"
+        android:layout_toEndOf="@+id/listItemSSID"/>
+
+    <ImageView
+        android:id="@+id/listItemLevel"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="7dp"
+        android:layout_toEndOf="@+id/listItemWifiLock"/>
+
     <TextView
-        android:id="@+id/listItemAddress"
+        android:id="@+id/listItemFreq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginStart="10dp"
-        android:textColor="@android:color/darker_gray"
-        android:layout_toEndOf="@+id/listItemSSID"
-        android:textSize="12sp" />
+        android:textColor="@color/black"
+        android:layout_toEndOf="@+id/listItemLevel"
+        android:textSize="12sp"/>
 
     <View
         android:id="@+id/line"

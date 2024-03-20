@@ -32,11 +32,12 @@ class MainActivity : AppCompatActivity() {
         val result: List<ScanResult> = wifiManager.scanResults
         val btnScan: Button = findViewById(R.id.btnScan)
         btnScan.setOnClickListener {
-            result.forEachIndexed { index, data ->
+            val descendingList = result.sortedByDescending { it.level }
+            descendingList.forEachIndexed { index, data ->
                 if (data.SSID != "") {
-                    Log.d("test",DataModel.Wifi(data.SSID,data.BSSID).toString())
-                    list.add(DataModel.Wifi(data.SSID,data.BSSID))
-                    adapter.notifyDataSetChanged()
+                    Log.d("testtest",DataModel.Wifi(data.SSID,data.BSSID,data.level,data.capabilities,data.frequency).toString())
+                    list.add(DataModel.Wifi(data.SSID,data.BSSID,data.level,data.capabilities,data.frequency))
+                    adapter.notifyItemInserted(index)
                 }
             }
         }
